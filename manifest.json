@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Washington Post Unblocker",
+  "description": "This extension removes the signup overlay on Washington Post articles.",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs", "*://www.washingtonpost.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.washingtonpost.com/*"],
+      "js": ["wapoUnblocker.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
